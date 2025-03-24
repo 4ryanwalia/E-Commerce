@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "32599364658",
+    "firebase_url": "https://zepto-4a284-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "zepto-4a284",
+    "storage_bucket": "zepto-4a284.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:32599364658:android:0edd17b5977e7a4504582b",
+        "android_client_info": {
+          "package_name": "com.nmims.zepto"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB6SlvHTfWji0LHc4PvVMFwd3LnlEtJi8g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

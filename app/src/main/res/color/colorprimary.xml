@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <resources>
+        <color android:name="colorPrimary">#4CAF50</color> <!-- Green -->
+        <color android:name="colorAccent">#FF4081</color> <!-- Pink -->
+        <color android:name="dark_background">#121212</color>
+        <color android:name="dark_toolbar">#212121</color>
+        <color android:name="dark_card_background">#1E1E1E</color>
+        <color android:name="light_text_color">#FFFFFF</color>
+        <color android:name="price_text_color">#FFC107</color>
+    </resources>
+</selector>

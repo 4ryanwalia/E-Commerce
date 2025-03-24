@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfileActivity">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/profileCard"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        app:cardBackgroundColor="@color/colorCardBackground"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/profileImageView"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:src="@drawable/ic_profile" />
+
+            <TextView
+                android:id="@+id/userNameTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:textAppearance="?attr/textAppearanceHeadline6"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/profileImageView"
+                app:layout_constraintTop_toTopOf="@+id/profileImageView"
+                tools:text="User Name" />
+
+            <TextView
+                android:id="@+id/userEmailTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:textAppearance="?attr/textAppearanceBody2"
+                android:textColor="@color/textColorSecondary"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/profileImageView"
+                app:layout_constraintTop_toBottomOf="@+id/userNameTextView"
+                tools:text="user@example.com" />
+
+            <TextView
+                android:id="@+id/userPhoneTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:textAppearance="?attr/textAppearanceBody2"
+                android:textColor="@color/textColorSecondary"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/profileImageView"
+                app:layout_constraintTop_toBottomOf="@+id/userEmailTextView"
+                tools:text="123-456-7890" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <com.google.android.material.button.MaterialButton
+        style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
+        android:id="@+id/editProfile"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Edit Profile"
+        android:textColor="@color/white"
+        app:icon="@drawable/ic_edit"
+        app:iconTint="@color/textColorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profileCard"
+        android:gravity="start|center_vertical"
+        android:textAlignment="viewStart"
+        />
+
+    <com.google.android.material.button.MaterialButton
+        style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
+        android:id="@+id/recentOrders"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Recent Orders"
+        android:textColor="@color/white"
+        app:icon="@drawable/ic_orders"
+        app:iconTint="@color/textColorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editProfile"
+        android:gravity="start|center_vertical"
+        android:textAlignment="viewStart"
+        />
+
+    <com.google.android.material.button.MaterialButton
+        style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
+        android:id="@+id/customerSupport"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Customer Support"
+        android:textColor="@color/white"
+        app:icon="@drawable/ic_support"
+        app:iconTint="@color/textColorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recentOrders"
+        android:gravity="start|center_vertical"
+        android:textAlignment="viewStart"
+        />
+
+    <com.google.android.material.button.MaterialButton
+        style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
+        android:id="@+id/myGiftCard"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="My Gift Card"
+        android:textColor="@color/white"
+        app:icon="@drawable/ic_gift"
+        app:iconTint="@color/textColorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/customerSupport"
+        android:gravity="start|center_vertical"
+        android:textAlignment="viewStart"
+        />
+
+    <com.google.android.material.button.MaterialButton
+        style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
+        android:id="@+id/logout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Logout"
+        android:textColor="@color/white"
+        app:icon="@drawable/ic_logout"
+        app:iconTint="@color/textColorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/myGiftCard"
+        android:gravity="start|center_vertical"
+        android:textAlignment="viewStart"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

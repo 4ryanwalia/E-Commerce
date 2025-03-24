@@ -1,0 +1,84 @@
+plugins {
+    alias(libs.plugins.android.application)
+    id 'com.google.gms.google-services'
+}
+android {
+    namespace 'com.nmims.zepto'
+    compileSdk 35
+    defaultConfig {
+        applicationId "com.nmims.zepto"
+        minSdk 30
+        targetSdk 35
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+}
+dependencies {
+    implementation platform(libs.firebase.bom)
+    implementation libs.firebase.analytics
+    implementation libs.google.firebase.auth
+    implementation libs.google.firebase.database
+    implementation libs.firebase.auth
+    implementation libs.firebase.database
+    implementation libs.appcompat.v161
+    implementation libs.material.v1110
+    implementation libs.constraintlayout.v214
+    implementation libs.appcompat
+    implementation libs.material
+    implementation libs.activity
+    implementation libs.constraintlayout
+    implementation libs.play.services.maps
+    implementation libs.play.services.analytics.impl
+    testImplementation libs.junit
+    androidTestImplementation libs.ext.junit
+    androidTestImplementation libs.espresso.core
+    implementation(libs.play.services.location.v2101)
+    implementation(libs.play.services.maps.v1810)
+    implementation(libs.appcompat) // Or latest version
+    implementation(libs.gms.play.services.location) // Or latest version
+    implementation libs.firebase.bom.v3222 // Use the latest version
+    implementation libs.firebase.storage
+    implementation libs.picasso // Use the latest version if available
+    implementation libs.osmdroid.osmdroid.android
+    implementation(libs.recyclerview)
+    implementation libs.firebase.firestore  // Add this line if it's missing
+    implementation libs.firebase.auth.v2103 // Firebase Auth for login functionality
+    implementation libs.osmdroid.osmdroid.android // Or the latest version
+    implementation libs.material.v161
+    implementation libs.firebase.ui.auth
+    implementation libs.okhttp   // OkHttp for HTTP requests
+    implementation libs.glide // Glide for loading images (optional)
+    annotationProcessor libs.compiler // Glide Compiler (optional)
+    implementation libs.cloudinary.android // Use the latest version
+
+    implementation(libs.cloudinary.http44) {
+        exclude group: 'org.apache.httpcomponents', module: 'httpclient'
+        exclude group: 'org.apache.httpcomponents', module: 'httpcore'
+        exclude group: 'org.apache.httpcomponents', module: 'httpmime'
+    }
+
+        // Cloudinary
+        implementation libs.cloudinary.android.v1300
+        implementation libs.glide.v4130
+        annotationProcessor libs.compiler.v4130
+        implementation libs.activity.ktx // Use latest version
+        implementation libs.fragment.ktx // Use latest version
+        implementation libs.picasso.v271828 //Or any other image loading library
+    implementation libs.recyclerview.v132 // Or latest version
+    implementation libs.material // Or latest
+    implementation libs.firebase.database.v2030 //For firebase
+    implementation libs.firebase.auth.v2231   // For firebase authentication.
+
+}

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="categoryName" type="id" />
+    <item name="categoryImage" type="id" />
+    <item name="buttonContinue" type="id" />
+    <item name="profileIcon" type="id" />
+    <item name="categoryRecyclerView" type="id" />
+    <item name="deliveryAddress" type="id" />
+    <item name="search_icon" type="id" />
+    <item name="search_edit_text" type="id" />
+    <item name="category_image" type="id" />
+    <item name="category_text" type="id" />
+    <item name="footer_rupee" type="id" />
+    <item name="footer_order_again" type="id" />
+    <item name="footer_basket" type="id" />
+    <item name="footer_categories" type="id" />
+    <item name="productName" type="id" />
+    <item name="productPrice" type="id" />
+    <item name="productImage" type="id" />
+    <item name="addToCart" type="id" />
+    <item name="applyCouponButton" type="id" />
+    <item name="couponInputLayout" type="id" />
+    <item name="couponEditText" type="id" />
+</resources>

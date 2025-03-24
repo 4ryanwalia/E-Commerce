@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="firebase_database_url" translatable="false">https://zepto-4a284-default-rtdb.asia-southeast1.firebasedatabase.app</string>
+    <string name="gcm_defaultSenderId" translatable="false">32599364658</string>
+    <string name="google_api_key" translatable="false">AIzaSyB6SlvHTfWji0LHc4PvVMFwd3LnlEtJi8g</string>
+    <string name="google_app_id" translatable="false">1:32599364658:android:0edd17b5977e7a4504582b</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyB6SlvHTfWji0LHc4PvVMFwd3LnlEtJi8g</string>
+    <string name="google_storage_bucket" translatable="false">zepto-4a284.firebasestorage.app</string>
+    <string name="project_id" translatable="false">zepto-4a284</string>
+</resources>

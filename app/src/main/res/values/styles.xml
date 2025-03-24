@@ -1,0 +1,14 @@
+<resources>
+
+    <style name="Widget.App.MinusButton" parent="Widget.Material3.Button.IconButton">
+        <item name="iconTint">@color/black</item>
+        <item name="backgroundTint">@color/white</item>
+
+    </style>
+
+    <style name="Widget.App.PlusButton" parent="Widget.Material3.Button.IconButton">
+        <item name="iconTint">@color/black</item>
+        <item name="backgroundTint">@color/white</item>
+    </style>
+
+</resources>

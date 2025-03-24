@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <drawable name="protein_shake" />
+    <drawable name="energy_bar" />
+    <drawable name="dry_fruits" />
+</resources>

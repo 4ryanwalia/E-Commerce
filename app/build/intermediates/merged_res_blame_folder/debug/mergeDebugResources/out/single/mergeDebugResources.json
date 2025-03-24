@@ -1,0 +1,254 @@
+[
+    {
+        "merged": "C:\\Users\\aryan\\.gradle\\daemon\\8.10.2\\com.nmims.zepto.app-debug-61:\\layout_activity_support.xml.flat",
+        "source": "C:\\Users\\aryan\\.gradle\\daemon\\8.10.2\\com.nmims.zepto.app-main-63:\\layout\\activity_support.xml"
+    },
+    {
+        "merged": "C:\\Users\\aryan\\.gradle\\daemon\\8.10.2\\com.nmims.zepto.app-debug-61:\\mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\aryan\\.gradle\\daemon\\8.10.2\\com.nmims.zepto.app-main-63:\\mipmap-mdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\aryan\\.gradle\\daemon\\8.10.2\\com.nmims.zepto.app-debug-61:\\layout_activity_gift_card.xml.flat",
+        "source": "C:\\Users\\aryan\\.gradle\\daemon\\8.10.2\\com.nmims.zepto.app-main-63:\\layout\\activity_gift_card.xml"
+    },
+    {
+        "merged": "C:\\Users\\aryan\\.gradle\\daemon\\8.10.2\\com.nmims.zepto.app-debug-61:\\drawable_ic_minus.xml.flat",
+        "source": "C:\\Users\\aryan\\.gradle\\daemon\\8.10.2\\com.nmims.zepto.app-main-63:\\drawable\\ic_minus.xml"
+    },
+    {
+        "merged": "C:\\Users\\aryan\\.gradle\\daemon\\8.10.2\\com.nmims.zepto.app-debug-61:\\drawable_ic_logout.xml.flat",
+        "source": "C:\\Users\\aryan\\.gradle\\daemon\\8.10.2\\com.nmims.zepto.app-main-63:\\drawable\\ic_logout.xml"
+    },
+    {
+        "merged": "C:\\Users\\aryan\\.gradle\\daemon\\8.10.2\\com.nmims.zepto.app-debug-61:\\drawable_ic_orders.xml.flat",
+        "source": "C:\\Users\\aryan\\.gradle\\daemon\\8.10.2\\com.nmims.zepto.app-main-63:\\drawable\\ic_orders.xml"
+    },
+    {
+        "merged": "C:\\Users\\aryan\\.gradle\\daemon\\8.10.2\\com.nmims.zepto.app-debug-61:\\drawable_protein_box.jpg.flat",
+        "source": "C:\\Users\\aryan\\.gradle\\daemon\\8.10.2\\com.nmims.zepto.app-main-63:\\drawable\\protein_box.jpg"
+    },
+    {
+        "merged": "C:\\Users\\aryan\\.gradle\\daemon\\8.10.2\\com.nmims.zepto.app-debug-61:\\mipmap-hdpi_ic_launcher_foreground.webp.flat",
+        "source": "C:\\Users\\aryan\\.gradle\\daemon\\8.10.2\\com.nmims.zepto.app-main-63:\\mipmap-hdpi\\ic_launcher_foreground.webp"
+    },
+    {
+        "merged": "C:\\Users\\aryan\\.gradle\\daemon\\8.10.2\\com.nmims.zepto.app-debug-61:\\xml_data_extraction_rules.xml.flat",
+        "source": "C:\\Users\\aryan\\.gradle\\daemon\\8.10.2\\com.nmims.zepto.app-main-63:\\xml\\data_extraction_rules.xml"
+    },
+    {
+        "merged": "C:\\Users\\aryan\\.gradle\\daemon\\8.10.2\\com.nmims.zepto.app-debug-61:\\drawable_search_bar_background.xml.flat",
+        "source": "C:\\Users\\aryan\\.gradle\\daemon\\8.10.2\\com.nmims.zepto.app-main-63:\\drawable\\search_bar_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\aryan\\.gradle\\daemon\\8.10.2\\com.nmims.zepto.app-debug-61:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\aryan\\.gradle\\daemon\\8.10.2\\com.nmims.zepto.app-main-63:\\mipmap-xxxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\aryan\\.gradle\\daemon\\8.10.2\\com.nmims.zepto.app-debug-61:\\mipmap-xxxhdpi_ic_launcher_foreground.webp.flat",
+        "source": "C:\\Users\\aryan\\.gradle\\daemon\\8.10.2\\com.nmims.zepto.app-main-63:\\mipmap-xxxhdpi\\ic_launcher_foreground.webp"
+    },
+    {
+        "merged": "C:\\Users\\aryan\\.gradle\\daemon\\8.10.2\\com.nmims.zepto.app-debug-61:\\mipmap-mdpi_ic_launcher_foreground.webp.flat",
+        "source": "C:\\Users\\aryan\\.gradle\\daemon\\8.10.2\\com.nmims.zepto.app-main-63:\\mipmap-mdpi\\ic_launcher_foreground.webp"
+    },
+    {
+        "merged": "C:\\Users\\aryan\\.gradle\\daemon\\8.10.2\\com.nmims.zepto.app-debug-61:\\drawable_ic_edit.xml.flat",
+        "source": "C:\\Users\\aryan\\.gradle\\daemon\\8.10.2\\com.nmims.zepto.app-main-63:\\drawable\\ic_edit.xml"
+    },
+    {
+        "merged": "C:\\Users\\aryan\\.gradle\\daemon\\8.10.2\\com.nmims.zepto.app-debug-61:\\drawable_edittext_bg.xml.flat",
+        "source": "C:\\Users\\aryan\\.gradle\\daemon\\8.10.2\\com.nmims.zepto.app-main-63:\\drawable\\edittext_bg.xml"
+    },
+    {
+        "merged": "C:\\Users\\aryan\\.gradle\\daemon\\8.10.2\\com.nmims.zepto.app-debug-61:\\drawable_chocolate.png.flat",
+        "source": "C:\\Users\\aryan\\.gradle\\daemon\\8.10.2\\com.nmims.zepto.app-main-63:\\drawable\\chocolate.png"
+    },
+    {
+        "merged": "C:\\Users\\aryan\\.gradle\\daemon\\8.10.2\\com.nmims.zepto.app-debug-61:\\layout_activity_order.xml.flat",
+        "source": "C:\\Users\\aryan\\.gradle\\daemon\\8.10.2\\com.nmims.zepto.app-main-63:\\layout\\activity_order.xml"
+    },
+    {
+        "merged": "C:\\Users\\aryan\\.gradle\\daemon\\8.10.2\\com.nmims.zepto.app-debug-61:\\drawable_ic_support.xml.flat",
+        "source": "C:\\Users\\aryan\\.gradle\\daemon\\8.10.2\\com.nmims.zepto.app-main-63:\\drawable\\ic_support.xml"
+    },
+    {
+        "merged": "C:\\Users\\aryan\\.gradle\\daemon\\8.10.2\\com.nmims.zepto.app-debug-61:\\drawable_profile_placeholder.png.flat",
+        "source": "C:\\Users\\aryan\\.gradle\\daemon\\8.10.2\\com.nmims.zepto.app-main-63:\\drawable\\profile_placeholder.png"
+    },
+    {
+        "merged": "C:\\Users\\aryan\\.gradle\\daemon\\8.10.2\\com.nmims.zepto.app-debug-61:\\layout_product_item_small.xml.flat",
+        "source": "C:\\Users\\aryan\\.gradle\\daemon\\8.10.2\\com.nmims.zepto.app-main-63:\\layout\\product_item_small.xml"
+    },
+    {
+        "merged": "C:\\Users\\aryan\\.gradle\\daemon\\8.10.2\\com.nmims.zepto.app-debug-61:\\layout_activity_cart.xml.flat",
+        "source": "C:\\Users\\aryan\\.gradle\\daemon\\8.10.2\\com.nmims.zepto.app-main-63:\\layout\\activity_cart.xml"
+    },
+    {
+        "merged": "C:\\Users\\aryan\\.gradle\\daemon\\8.10.2\\com.nmims.zepto.app-debug-61:\\layout_order_item.xml.flat",
+        "source": "C:\\Users\\aryan\\.gradle\\daemon\\8.10.2\\com.nmims.zepto.app-main-63:\\layout\\order_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\aryan\\.gradle\\daemon\\8.10.2\\com.nmims.zepto.app-debug-61:\\drawable_protein.png.flat",
+        "source": "C:\\Users\\aryan\\.gradle\\daemon\\8.10.2\\com.nmims.zepto.app-main-63:\\drawable\\protein.png"
+    },
+    {
+        "merged": "C:\\Users\\aryan\\.gradle\\daemon\\8.10.2\\com.nmims.zepto.app-debug-61:\\mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\aryan\\.gradle\\daemon\\8.10.2\\com.nmims.zepto.app-main-63:\\mipmap-hdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\aryan\\.gradle\\daemon\\8.10.2\\com.nmims.zepto.app-debug-61:\\drawable_ic_gift.xml.flat",
+        "source": "C:\\Users\\aryan\\.gradle\\daemon\\8.10.2\\com.nmims.zepto.app-main-63:\\drawable\\ic_gift.xml"
+    },
+    {
+        "merged": "C:\\Users\\aryan\\.gradle\\daemon\\8.10.2\\com.nmims.zepto.app-debug-61:\\mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\aryan\\.gradle\\daemon\\8.10.2\\com.nmims.zepto.app-main-63:\\mipmap-xhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\aryan\\.gradle\\daemon\\8.10.2\\com.nmims.zepto.app-debug-61:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\aryan\\.gradle\\daemon\\8.10.2\\com.nmims.zepto.app-main-63:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\aryan\\.gradle\\daemon\\8.10.2\\com.nmims.zepto.app-debug-61:\\drawable_background_gradient.xml.flat",
+        "source": "C:\\Users\\aryan\\.gradle\\daemon\\8.10.2\\com.nmims.zepto.app-main-63:\\drawable\\background_gradient.xml"
+    },
+    {
+        "merged": "C:\\Users\\aryan\\.gradle\\daemon\\8.10.2\\com.nmims.zepto.app-debug-61:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\aryan\\.gradle\\daemon\\8.10.2\\com.nmims.zepto.app-main-63:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\aryan\\.gradle\\daemon\\8.10.2\\com.nmims.zepto.app-debug-61:\\drawable_rounded_button.xml.flat",
+        "source": "C:\\Users\\aryan\\.gradle\\daemon\\8.10.2\\com.nmims.zepto.app-main-63:\\drawable\\rounded_button.xml"
+    },
+    {
+        "merged": "C:\\Users\\aryan\\.gradle\\daemon\\8.10.2\\com.nmims.zepto.app-debug-61:\\drawable_greenlays.png.flat",
+        "source": "C:\\Users\\aryan\\.gradle\\daemon\\8.10.2\\com.nmims.zepto.app-main-63:\\drawable\\greenlays.png"
+    },
+    {
+        "merged": "C:\\Users\\aryan\\.gradle\\daemon\\8.10.2\\com.nmims.zepto.app-debug-61:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\aryan\\.gradle\\daemon\\8.10.2\\com.nmims.zepto.app-main-63:\\mipmap-xxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\aryan\\.gradle\\daemon\\8.10.2\\com.nmims.zepto.app-debug-61:\\drawable_round_shape.xml.flat",
+        "source": "C:\\Users\\aryan\\.gradle\\daemon\\8.10.2\\com.nmims.zepto.app-main-63:\\drawable\\round_shape.xml"
+    },
+    {
+        "merged": "C:\\Users\\aryan\\.gradle\\daemon\\8.10.2\\com.nmims.zepto.app-debug-61:\\layout_activity_homepage.xml.flat",
+        "source": "C:\\Users\\aryan\\.gradle\\daemon\\8.10.2\\com.nmims.zepto.app-main-63:\\layout\\activity_homepage.xml"
+    },
+    {
+        "merged": "C:\\Users\\aryan\\.gradle\\daemon\\8.10.2\\com.nmims.zepto.app-debug-61:\\layout_activity_profile.xml.flat",
+        "source": "C:\\Users\\aryan\\.gradle\\daemon\\8.10.2\\com.nmims.zepto.app-main-63:\\layout\\activity_profile.xml"
+    },
+    {
+        "merged": "C:\\Users\\aryan\\.gradle\\daemon\\8.10.2\\com.nmims.zepto.app-debug-61:\\drawable_ic_profile.xml.flat",
+        "source": "C:\\Users\\aryan\\.gradle\\daemon\\8.10.2\\com.nmims.zepto.app-main-63:\\drawable\\ic_profile.xml"
+    },
+    {
+        "merged": "C:\\Users\\aryan\\.gradle\\daemon\\8.10.2\\com.nmims.zepto.app-debug-61:\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\aryan\\.gradle\\daemon\\8.10.2\\com.nmims.zepto.app-main-63:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\aryan\\.gradle\\daemon\\8.10.2\\com.nmims.zepto.app-debug-61:\\drawable_button_background.xml.flat",
+        "source": "C:\\Users\\aryan\\.gradle\\daemon\\8.10.2\\com.nmims.zepto.app-main-63:\\drawable\\button_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\aryan\\.gradle\\daemon\\8.10.2\\com.nmims.zepto.app-debug-61:\\mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\aryan\\.gradle\\daemon\\8.10.2\\com.nmims.zepto.app-main-63:\\mipmap-hdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\aryan\\.gradle\\daemon\\8.10.2\\com.nmims.zepto.app-debug-61:\\color_blue_gradient.xml.flat",
+        "source": "C:\\Users\\aryan\\.gradle\\daemon\\8.10.2\\com.nmims.zepto.app-main-63:\\color\\blue_gradient.xml"
+    },
+    {
+        "merged": "C:\\Users\\aryan\\.gradle\\daemon\\8.10.2\\com.nmims.zepto.app-debug-61:\\mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\aryan\\.gradle\\daemon\\8.10.2\\com.nmims.zepto.app-main-63:\\mipmap-xxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\aryan\\.gradle\\daemon\\8.10.2\\com.nmims.zepto.app-debug-61:\\color_blue_background.xml.flat",
+        "source": "C:\\Users\\aryan\\.gradle\\daemon\\8.10.2\\com.nmims.zepto.app-main-63:\\color\\blue_background.xml"
+    },
+    {
+        "merged": "com.nmims.zepto.app-debug-61:/layout_activity_order.xml.flat",
+        "source": "com.nmims.zepto.app-main-63:/layout/activity_order.xml"
+    },
+    {
+        "merged": "C:\\Users\\aryan\\.gradle\\daemon\\8.10.2\\com.nmims.zepto.app-debug-61:\\layout_activity_edit_profile.xml.flat",
+        "source": "C:\\Users\\aryan\\.gradle\\daemon\\8.10.2\\com.nmims.zepto.app-main-63:\\layout\\activity_edit_profile.xml"
+    },
+    {
+        "merged": "C:\\Users\\aryan\\.gradle\\daemon\\8.10.2\\com.nmims.zepto.app-debug-61:\\layout_item_product.xml.flat",
+        "source": "C:\\Users\\aryan\\.gradle\\daemon\\8.10.2\\com.nmims.zepto.app-main-63:\\layout\\item_product.xml"
+    },
+    {
+        "merged": "C:\\Users\\aryan\\.gradle\\daemon\\8.10.2\\com.nmims.zepto.app-debug-61:\\drawable_maxlays.png.flat",
+        "source": "C:\\Users\\aryan\\.gradle\\daemon\\8.10.2\\com.nmims.zepto.app-main-63:\\drawable\\maxlays.png"
+    },
+    {
+        "merged": "C:\\Users\\aryan\\.gradle\\daemon\\8.10.2\\com.nmims.zepto.app-debug-61:\\drawable_lays.png.flat",
+        "source": "C:\\Users\\aryan\\.gradle\\daemon\\8.10.2\\com.nmims.zepto.app-main-63:\\drawable\\lays.png"
+    },
+    {
+        "merged": "C:\\Users\\aryan\\.gradle\\daemon\\8.10.2\\com.nmims.zepto.app-debug-61:\\mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\aryan\\.gradle\\daemon\\8.10.2\\com.nmims.zepto.app-main-63:\\mipmap-mdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\aryan\\.gradle\\daemon\\8.10.2\\com.nmims.zepto.app-debug-61:\\layout_activity_recent_orders.xml.flat",
+        "source": "C:\\Users\\aryan\\.gradle\\daemon\\8.10.2\\com.nmims.zepto.app-main-63:\\layout\\activity_recent_orders.xml"
+    },
+    {
+        "merged": "C:\\Users\\aryan\\.gradle\\daemon\\8.10.2\\com.nmims.zepto.app-debug-61:\\color_coloraccent.xml.flat",
+        "source": "C:\\Users\\aryan\\.gradle\\daemon\\8.10.2\\com.nmims.zepto.app-main-63:\\color\\coloraccent.xml"
+    },
+    {
+        "merged": "C:\\Users\\aryan\\.gradle\\daemon\\8.10.2\\com.nmims.zepto.app-debug-61:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\aryan\\.gradle\\daemon\\8.10.2\\com.nmims.zepto.app-main-63:\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\Users\\aryan\\.gradle\\daemon\\8.10.2\\com.nmims.zepto.app-debug-61:\\mipmap-xhdpi_ic_launcher_foreground.webp.flat",
+        "source": "C:\\Users\\aryan\\.gradle\\daemon\\8.10.2\\com.nmims.zepto.app-main-63:\\mipmap-xhdpi\\ic_launcher_foreground.webp"
+    },
+    {
+        "merged": "C:\\Users\\aryan\\.gradle\\daemon\\8.10.2\\com.nmims.zepto.app-debug-61:\\drawable_ic_cart.xml.flat",
+        "source": "C:\\Users\\aryan\\.gradle\\daemon\\8.10.2\\com.nmims.zepto.app-main-63:\\drawable\\ic_cart.xml"
+    },
+    {
+        "merged": "C:\\Users\\aryan\\.gradle\\daemon\\8.10.2\\com.nmims.zepto.app-debug-61:\\drawable_profile_background.xml.flat",
+        "source": "C:\\Users\\aryan\\.gradle\\daemon\\8.10.2\\com.nmims.zepto.app-main-63:\\drawable\\profile_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\aryan\\.gradle\\daemon\\8.10.2\\com.nmims.zepto.app-debug-61:\\layout_activity_register.xml.flat",
+        "source": "C:\\Users\\aryan\\.gradle\\daemon\\8.10.2\\com.nmims.zepto.app-main-63:\\layout\\activity_register.xml"
+    },
+    {
+        "merged": "C:\\Users\\aryan\\.gradle\\daemon\\8.10.2\\com.nmims.zepto.app-debug-61:\\drawable_logo.png.flat",
+        "source": "C:\\Users\\aryan\\.gradle\\daemon\\8.10.2\\com.nmims.zepto.app-main-63:\\drawable\\logo.png"
+    },
+    {
+        "merged": "C:\\Users\\aryan\\.gradle\\daemon\\8.10.2\\com.nmims.zepto.app-debug-61:\\mipmap-xxhdpi_ic_launcher_foreground.webp.flat",
+        "source": "C:\\Users\\aryan\\.gradle\\daemon\\8.10.2\\com.nmims.zepto.app-main-63:\\mipmap-xxhdpi\\ic_launcher_foreground.webp"
+    },
+    {
+        "merged": "C:\\Users\\aryan\\.gradle\\daemon\\8.10.2\\com.nmims.zepto.app-debug-61:\\drawable_ic_plus.xml.flat",
+        "source": "C:\\Users\\aryan\\.gradle\\daemon\\8.10.2\\com.nmims.zepto.app-main-63:\\drawable\\ic_plus.xml"
+    },
+    {
+        "merged": "C:\\Users\\aryan\\.gradle\\daemon\\8.10.2\\com.nmims.zepto.app-debug-61:\\xml_backup_rules.xml.flat",
+        "source": "C:\\Users\\aryan\\.gradle\\daemon\\8.10.2\\com.nmims.zepto.app-main-63:\\xml\\backup_rules.xml"
+    },
+    {
+        "merged": "C:\\Users\\aryan\\.gradle\\daemon\\8.10.2\\com.nmims.zepto.app-debug-61:\\color_colorprimary.xml.flat",
+        "source": "C:\\Users\\aryan\\.gradle\\daemon\\8.10.2\\com.nmims.zepto.app-main-63:\\color\\colorprimary.xml"
+    },
+    {
+        "merged": "C:\\Users\\aryan\\.gradle\\daemon\\8.10.2\\com.nmims.zepto.app-debug-61:\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\aryan\\.gradle\\daemon\\8.10.2\\com.nmims.zepto.app-main-63:\\drawable\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\aryan\\.gradle\\daemon\\8.10.2\\com.nmims.zepto.app-debug-61:\\layout_item_cart.xml.flat",
+        "source": "C:\\Users\\aryan\\.gradle\\daemon\\8.10.2\\com.nmims.zepto.app-main-63:\\layout\\item_cart.xml"
+    },
+    {
+        "merged": "C:\\Users\\aryan\\.gradle\\daemon\\8.10.2\\com.nmims.zepto.app-debug-61:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\aryan\\.gradle\\daemon\\8.10.2\\com.nmims.zepto.app-main-63:\\mipmap-xhdpi\\ic_launcher_round.webp"
+    }
+]
