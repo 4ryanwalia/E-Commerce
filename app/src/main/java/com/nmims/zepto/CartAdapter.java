@@ -26,12 +26,9 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.CartViewHolder
     private TextView totalPriceTextView;
     private Context context;
     private OnQuantityChangeListener quantityChangeListener;
-
-    // Interface for quantity changes
     public interface OnQuantityChangeListener {
         void onQuantityChanged();
     }
-
     public CartAdapter(List<Product> productList, TextView totalPriceTextView, Context context, OnQuantityChangeListener listener) {
         this.productList = productList;
         this.totalPriceTextView = totalPriceTextView;
@@ -39,7 +36,6 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.CartViewHolder
         this.quantityChangeListener = listener;
         updateTotalPrice(); // Initialize total price
     }
-
     @NonNull
     @Override
     public CartViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -47,26 +43,23 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.CartViewHolder
         Log.d("CartAdapter", "onCreateViewHolder: called"); // Check if this is called
         return new CartViewHolder(view);
     }
-
     @Override
     public void onBindViewHolder(@NonNull CartViewHolder holder, int position) {
         if (position < 0 || position >= productList.size()) {
             Log.e("CartAdapter", "onBindViewHolder: Invalid position: " + position);
-            return; // Prevent IndexOutOfBoundsException
+            return;
         }
 
         Product product = productList.get(position);
         Log.d("CartAdapter", "onBindViewHolder: position=" + position + ", product=" + (product != null ? product.getName() : "null"));
-
-        if (product != null) { // Check for null product
+        if (product != null) { // here we checking for null product
             holder.productNameTextView.setText(product.getName());
             holder.productPriceTextView.setText(formatPrice(product.getPrice()));
-
-            // Load image using Glide (use the stored context)
+            // Loading image using Glide (use the stored context)
             Glide.with(context)
                     .load(product.getImageUrl())
                     .apply(new RequestOptions()
-                            .placeholder(R.drawable.logo) // Use your placeholder
+                            .placeholder(R.drawable.logo)
                             .error(R.drawable.lays)) // Use your error image
                     .into(holder.productImageView);
 
@@ -77,24 +70,22 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.CartViewHolder
                 if (quantity > 1) {
                     product.setQuantity(quantity - 1);
                 } else {
-                    productList.remove(position);  // Remove the item if quantity is 1
+                    productList.remove(position);
                 }
-                notifyDataSetChanged(); // CRITICAL: Update the RecyclerView
+                notifyDataSetChanged();
                 if (quantityChangeListener != null) {
                     quantityChangeListener.onQuantityChanged();
                 }
             });
-
             holder.plusButton.setOnClickListener(v -> {
                 product.setQuantity(product.getQuantity() + 1);
-                notifyDataSetChanged(); // CRITICAL: Update the RecyclerView
+                notifyDataSetChanged(); // ider the recyclerview update ho raha
                 if (quantityChangeListener != null) {
                     quantityChangeListener.onQuantityChanged();
                 }
             });
-
         } else {
-            Log.e("CartAdapter", "onBindViewHolder: product is NULL at position: " + position);
+            Log.e("CartAdapter", "onBindViewHolder: product is null at position: " + position);
         }
     }
     @Override
@@ -103,7 +94,6 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.CartViewHolder
         Log.d("CartAdapter", "getItemCount: returning " + count); // Check the returned count
         return count;
     }
-
     public static class CartViewHolder extends RecyclerView.ViewHolder {
         ImageView productImageView;
         TextView productNameTextView, productPriceTextView, quantityTextView;

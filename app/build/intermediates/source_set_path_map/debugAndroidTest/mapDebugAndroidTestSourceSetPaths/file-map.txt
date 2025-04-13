@@ -1,0 +1,5 @@
+com.nmims.zepto.test.app-core-1.6.1-0 C:\Users\aryan\.gradle\caches\8.10.2\transforms\af65f49751dd863abe9c370f7e2c00e0\transformed\core-1.6.1\res
+com.nmims.zepto.test.app-androidTest-1 D:\zepto\app\build\generated\res\resValues\androidTest\debug
+com.nmims.zepto.test.app-mergeDebugAndroidTestResources-2 D:\zepto\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\merged.dir
+com.nmims.zepto.test.app-mergeDebugAndroidTestResources-3 D:\zepto\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\stripped.dir
+com.nmims.zepto.test.app-debugAndroidTest-4 D:\zepto\app\build\intermediates\merged_res\debugAndroidTest\mergeDebugAndroidTestResources

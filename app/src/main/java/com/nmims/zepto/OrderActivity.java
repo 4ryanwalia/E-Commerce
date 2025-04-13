@@ -1,6 +1,5 @@
 package com.nmims.zepto;
 
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -35,6 +34,9 @@ public class OrderActivity extends AppCompatActivity {
     private Button orderButton, applyCouponButton, changeAddressButton;
     private TextInputLayout couponInputLayout;
     private TextInputEditText couponEditText;
+
+    private TextInputEditText nameEditText, addressLine1EditText, cityEditText, stateEditText;
+
     private ProgressBar progressBar;
     private double walletBalance = 0.0;
     private double totalPrice = 0.0;
@@ -58,6 +60,12 @@ public class OrderActivity extends AppCompatActivity {
         progressBar = findViewById(R.id.progressBar);
         couponInputLayout = findViewById(R.id.couponInputLayout);
         couponEditText = findViewById(R.id.couponEditText);
+
+        // Address fields
+        nameEditText = findViewById(R.id.nameEditText);
+        addressLine1EditText = findViewById(R.id.addressLine1EditText);
+        cityEditText = findViewById(R.id.cityEditText);
+        stateEditText = findViewById(R.id.stateEditText);
 
         // Get cart details
         totalPrice = getIntent().getDoubleExtra("totalPrice", 0.0);
@@ -126,41 +134,47 @@ public class OrderActivity extends AppCompatActivity {
     private void applyDiscountCoupon() {
         String couponCode = couponEditText.getText().toString().trim();
 
-        // If no coupon is entered
         if (couponCode.isEmpty()) {
             couponInputLayout.setError("Enter a coupon code");
             return;
         }
 
-        // If a coupon is already applied
         if (couponApplied) {
             Toast.makeText(this, "Coupon already applied!", Toast.LENGTH_SHORT).show();
             return;
         }
 
-        // Check for valid coupons
         if ("GET10".equalsIgnoreCase(couponCode)) {
-            double discount = totalPrice * 0.10;  // 10% discount
-            finalPrice = totalPrice - discount;  // Update final price
+            double discount = totalPrice * 0.10;
+            finalPrice = totalPrice - discount;
 
-            // Update UI
             finalPriceTextView.setText("Final Total: ₹" + String.format("%.2f", finalPrice));
-            couponInputLayout.setError(null);  // Clear error if any
-            couponEditText.setEnabled(false);  // Disable editing after applying
-            applyCouponButton.setEnabled(false);  // Disable button after applying
+            couponInputLayout.setError(null);
+            couponEditText.setEnabled(false);
+            applyCouponButton.setEnabled(false);
             couponApplied = true;
 
             Toast.makeText(this, "10% discount applied!", Toast.LENGTH_SHORT).show();
-
             Log.d(TAG, "Coupon applied: GET10 | Discount: ₹" + discount + " | Final Price: ₹" + finalPrice);
         } else {
             couponInputLayout.setError("Invalid coupon code");
             Log.d(TAG, "Invalid coupon entered: " + couponCode);
         }
 
-        updateOrderButtonState();  // Ensure button is enabled/disabled correctly
+        updateOrderButtonState();
     }
+
     private void showConfirmationDialog() {
+        String name = nameEditText.getText().toString().trim();
+        String addressLine1 = addressLine1EditText.getText().toString().trim();
+        String city = cityEditText.getText().toString().trim();
+        String state = stateEditText.getText().toString().trim();
+
+        if (name.isEmpty() || addressLine1.isEmpty() || city.isEmpty() || state.isEmpty()) {
+            Toast.makeText(this, "Please fill in all delivery address fields.", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
         if (finalPrice > walletBalance) {
             Toast.makeText(this, "Insufficient funds!", Toast.LENGTH_SHORT).show();
             return;
@@ -169,12 +183,12 @@ public class OrderActivity extends AppCompatActivity {
         new AlertDialog.Builder(this)
                 .setTitle("Confirm Order")
                 .setMessage("Are you sure you want to place this order?")
-                .setPositiveButton("Yes", (dialog, which) -> placeOrder())
+                .setPositiveButton("Yes", (dialog, which) -> placeOrder(name, addressLine1, city, state))
                 .setNegativeButton("No", null)
                 .show();
     }
 
-    private void placeOrder() {
+    private void placeOrder(String name, String addressLine1, String city, String state) {
         progressBar.setVisibility(View.VISIBLE);
         orderButton.setEnabled(false);
 
@@ -182,7 +196,7 @@ public class OrderActivity extends AppCompatActivity {
         userRef.child("walletBalance").setValue(newBalance)
                 .addOnSuccessListener(aVoid -> {
                     Log.d(TAG, "Wallet updated");
-                    createOrder();
+                    createOrder(name, addressLine1, city, state);
                 })
                 .addOnFailureListener(e -> {
                     Log.e(TAG, "Error updating wallet", e);
@@ -192,10 +206,17 @@ public class OrderActivity extends AppCompatActivity {
                 });
     }
 
-    private void createOrder() {
+    private void createOrder(String name, String addressLine1, String city, String state) {
         String userId = FirebaseAuth.getInstance().getCurrentUser().getUid();
         long timestamp = System.currentTimeMillis();
-        Order order = new Order(userId, "pending", timestamp, finalPrice, cartItems, new HashMap<>());
+
+        Map<String, Object> meta = new HashMap<>();
+        meta.put("name", name);
+        meta.put("addressLine1", addressLine1);
+        meta.put("city", city);
+        meta.put("state", state);
+
+        Order order = new Order(userId, "pending", timestamp, finalPrice, cartItems, meta);
         DatabaseReference ordersRef = FirebaseDatabase.getInstance().getReference("orders");
 
         ordersRef.push().setValue(order)

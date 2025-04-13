@@ -80,5 +80,8 @@ dependencies {
     implementation libs.material // Or latest
     implementation libs.firebase.database.v2030 //For firebase
     implementation libs.firebase.auth.v2231   // For firebase authentication.
+        implementation 'com.google.android.material:material:1.9.0' // or latest stable
+
+
 
 }

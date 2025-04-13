@@ -31,7 +31,7 @@ public class CartActivity extends AppCompatActivity implements CartAdapter.OnQua
     private TextView totalPriceTextView;
     private Button checkoutButton;
     private TextView emptyCartTextView;
-    private ArrayList<Product> cartItems = new ArrayList<>(); // Local list, correctly initialized
+    private ArrayList<Product> cartItems = new ArrayList<>();
     private double walletBalance = 0.0;
     private FirebaseAuth mAuth;
     private DatabaseReference walletRef;
@@ -51,15 +51,12 @@ public class CartActivity extends AppCompatActivity implements CartAdapter.OnQua
 
         cartRecyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-
-        // --- CRITICAL DATA RECEIVING and Adapter Setup---
         Intent intent = getIntent();
         if (intent != null && intent.hasExtra("cartItems")) {
             ArrayList<Product> receivedCartItems = intent.getParcelableArrayListExtra("cartItems");
             if (receivedCartItems != null) {
                 cartItems.addAll(receivedCartItems); // Copy to the local list
-                Log.d("CartActivity", "onCreate: Received cartItems size: " + cartItems.size());
-                // Log each product received.  This is ESSENTIAL.
+
                 for (Product p : cartItems) {
                     Log.d("CartActivity", "onCreate: Received Product: " + p.getName() + ", Price: " + p.getPrice() + ", Qty: " + p.getQuantity() + ", ImageURL: " + p.getImageUrl());
                 }
@@ -70,16 +67,10 @@ public class CartActivity extends AppCompatActivity implements CartAdapter.OnQua
         } else {
             Log.w("CartActivity", "onCreate: Intent is NULL or does not have 'cartItems' extra");
         }
-
-
-
         cartAdapter = new CartAdapter(cartItems, totalPriceTextView, this, this);
         cartRecyclerView.setAdapter(cartAdapter);
-
-        // Show/hide the "empty cart" message.
         updateEmptyCartView();
         getUserWalletBalance();
-
         checkoutButton.setOnClickListener(v -> attemptCheckout());
     }
     private void updateEmptyCartView() {
@@ -91,22 +82,16 @@ public class CartActivity extends AppCompatActivity implements CartAdapter.OnQua
             cartRecyclerView.setVisibility(View.VISIBLE);
         }
     }
-
     private void attemptCheckout() {
         double totalPrice = cartAdapter.getTotalPriceFromCart();
-
-        // Check if the cart is empty *before* checking wallet balance.
         if (cartItems.isEmpty()) {
             Toast.makeText(CartActivity.this, "Your cart is empty!", Toast.LENGTH_SHORT).show();
             return;
         }
-
-
         if (walletBalance < totalPrice) {
             Toast.makeText(CartActivity.this, "Insufficient funds!", Toast.LENGTH_SHORT).show();
             return;
         }
-
         Intent intent = new Intent(CartActivity.this, OrderActivity.class);
         intent.putExtra("totalPrice", totalPrice);
         intent.putExtra("walletBalance", walletBalance);
@@ -114,26 +99,21 @@ public class CartActivity extends AppCompatActivity implements CartAdapter.OnQua
         startActivity(intent);
         returnUpdatedCart();
     }
-
-
     private void getUserWalletBalance() {
         FirebaseUser currentUser = mAuth.getCurrentUser();
         if (currentUser == null) {
-            // Handle not logged in
             Toast.makeText(this, "User not logged in.", Toast.LENGTH_SHORT).show();
-            finish(); // Close the activity
+            finish();
             return; // IMPORTANT
         }
-
         String userId = currentUser.getUid();
         walletRef = FirebaseDatabase.getInstance().getReference("users").child(userId).child("walletBalance");
-
         walletRef.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 if (snapshot.exists()) {
                     try {
-                        walletBalance = snapshot.getValue(Double.class); // Get as Double
+                        walletBalance = snapshot.getValue(Double.class);
                     } catch (Exception e) {
                         Log.e("CartActivity", "Error getting wallet balance", e);
                         walletBalance = 0.0; // Default to 0 on error
@@ -142,7 +122,6 @@ public class CartActivity extends AppCompatActivity implements CartAdapter.OnQua
                     walletBalance = 0.0;
                 }
             }
-
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
                 Log.e("CartActivity", "Error fetching wallet balance", error.toException());
@@ -150,20 +129,17 @@ public class CartActivity extends AppCompatActivity implements CartAdapter.OnQua
             }
         });
     }
-
     private void returnUpdatedCart() {
         Intent resultIntent = new Intent();
         resultIntent.putParcelableArrayListExtra("updatedCartItems", cartItems);
         setResult(RESULT_OK, resultIntent);
         //finish(); // No need to call finish here as onBackPressed will handle it.
     }
-
     @Override
     public void onBackPressed() {
         returnUpdatedCart();
         super.onBackPressed();
     }
-
     @Override
     public void onQuantityChanged() {
         Log.d("CartActivity", "onQuantityChanged: called"); // Check if this is called

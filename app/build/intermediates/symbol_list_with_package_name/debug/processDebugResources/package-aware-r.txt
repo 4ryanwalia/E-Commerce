@@ -3161,7 +3161,6 @@ drawable abc_textfield_search_material
 drawable abc_vector_test
 drawable avd_hide_password
 drawable avd_show_password
-drawable background_gradient
 drawable bonuspack_bubble
 drawable btn_checkbox_checked_mtrl
 drawable btn_checkbox_checked_to_unchecked_mtrl_animation
@@ -3172,10 +3171,8 @@ drawable btn_radio_off_mtrl
 drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
-drawable button_background
 drawable center
 drawable check
-drawable chocolate
 drawable common_full_open_on_phone
 drawable common_google_signin_btn_icon_dark
 drawable common_google_signin_btn_icon_dark_focused
@@ -3202,7 +3199,6 @@ drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
 drawable dry_fruits
-drawable edittext_bg
 drawable energy_bar
 drawable fui_ic_anonymous_white_24dp
 drawable fui_ic_apple_white_24dp
@@ -3217,7 +3213,6 @@ drawable fui_ic_twitter_bird_white_24dp
 drawable fui_ic_yahoo_24dp
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
-drawable greenlays
 drawable ic_arrow_back_black_24
 drawable ic_call_answer
 drawable ic_call_answer_low
@@ -3346,14 +3341,9 @@ drawable play_overlay
 drawable previous
 drawable profile_background
 drawable profile_placeholder
-drawable protein
-drawable protein_box
 drawable protein_shake
 drawable rotate_90
 drawable round_navigation_white_48
-drawable round_shape
-drawable rounded_button
-drawable search_bar_background
 drawable selected_thumbnail_border
 drawable sharp_add_black_36
 drawable sharp_remove_black_36
@@ -3704,6 +3694,11 @@ id immediateStop
 id included
 id indeterminate
 id info
+id inputConfirmPassword
+id inputEmail
+id inputMobile
+id inputName
+id inputPassword
 id invisible
 id invisible_frame
 id inward
@@ -3874,7 +3869,6 @@ id productPriceSmall
 id productPriceTextView
 id productQuantitySmall
 id productRecyclerView
-id productSize
 id profileCard
 id profileIcon
 id profileImageView
@@ -3991,6 +3985,8 @@ id terrain
 id text
 id text2
 id textEnd
+id textInputPassword
+id textInputUsername
 id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart

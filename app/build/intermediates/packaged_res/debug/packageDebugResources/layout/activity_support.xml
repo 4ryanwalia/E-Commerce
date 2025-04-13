@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/dark_background"  android:padding="16dp"
+    android:background="@color/dark_background"
+    android:padding="16dp"
     tools:context=".SupportActivity">
 
     <com.google.android.material.card.MaterialCardView
@@ -39,7 +40,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Call us at: +91 8130058689"
-            android:textColor="@color/secondary_text_color"
+            android:textColor="@color/colorBackground"
             android:textSize="18sp"
             android:autoLink="phone"
             android:layout_gravity="center_horizontal"
@@ -53,6 +54,7 @@
             android:layout_gravity="center_horizontal"
             app:icon="@drawable/ic_support"
             app:iconTint="@color/white"
+            app:backgroundTint="@color/colorAccent"
             style="@style/Widget.Material3.Button"/>
 
     </LinearLayout>

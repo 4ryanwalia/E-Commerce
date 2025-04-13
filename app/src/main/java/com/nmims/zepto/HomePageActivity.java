@@ -30,27 +30,23 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import com.nmims.zepto.Product;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
 public class HomePageActivity extends AppCompatActivity implements ProductAdapter.OnAddToCartClickListener {
-    // NOTE: Using a static list for cartItems is not ideal long-term. Consider a ViewModel.
     public static List<Product> cartItems = new ArrayList<>();
-    private final List<Product> productList = new ArrayList<>();  // Full list of products
-    private final List<Product> filteredList = new ArrayList<>(); // List for filtered/searched products
+    private final List<Product> productList = new ArrayList<>();
+    private final List<Product> filteredList = new ArrayList<>();
     private FloatingActionButton cartView;
     private BadgeDrawable badgeDrawable;
     private ProductAdapter productAdapter;
     private RecyclerView productRecyclerView;
     private static final int CART_REQUEST_CODE = 123;
-    private EditText searchBar; // Reference to the search bar
+    private EditText searchBar;
     private Button chipsButton, cokeButton, chocolateButton, allProductsButton;
 
-
-    @OptIn(markerClass = ExperimentalBadgeUtils.class)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -71,70 +67,53 @@ public class HomePageActivity extends AppCompatActivity implements ProductAdapte
                 startActivity(intent);
             });
         } else {
-            Log.e("HomePageActivity", "Profile icon not found!");
+            Log.e("HomePageActivity", "errorrr1");
         }
 
-        // Initialize the adapter with the *filtered* list.
-        productAdapter = new ProductAdapter(filteredList, this); // 'this' for click listener
-        //Important: Set Layout manager *before* setting adapter.
-        productRecyclerView.setLayoutManager(new GridLayoutManager(this, 2)); // 2 columns
+        productAdapter = new ProductAdapter(filteredList, this);
+        //setting layout  before  applying the  adapter.
+        productRecyclerView.setLayoutManager(new GridLayoutManager(this, 2)); // 2 columnss
         productRecyclerView.setAdapter(productAdapter);
-
-
-
-        // Set up the cart FAB.
         cartView.setOnClickListener(v -> {
-            // Check if user is logged in BEFORE starting CartActivity
             FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
             if (currentUser != null) {
-                Log.d("HomePageActivity", "cartView clicked. cartItems size: " + cartItems.size());
+                Log.d("HomePageActivity", "cart view is clicked. cart items size: " + cartItems.size());
                 Intent intent = new Intent(HomePageActivity.this, CartActivity.class);
-                // ***** CRITICAL: Put the cartItems into the Intent *****
+
                 intent.putParcelableArrayListExtra("cartItems", new ArrayList<>(cartItems));
-                startActivityForResult(intent, CART_REQUEST_CODE); // Use startActivityForResult
-            } else {
-                // User is not logged in, show a message or go to login
-                Toast.makeText(HomePageActivity.this, "Please log in to view your cart.", Toast.LENGTH_SHORT).show();
-                Intent loginIntent = new Intent(HomePageActivity.this, MainActivity.class); // Or your LoginActivity
-                startActivity(loginIntent);
+                startActivityForResult(intent, CART_REQUEST_CODE);
             }
         });
 
-        // Initialize badge. Do this *after* findViewById, but it doesn't need to be in cartView.post
         badgeDrawable = BadgeDrawable.create(this);
-        badgeDrawable.setBackgroundColor(getResources().getColor(R.color.black, getTheme())); // Use getTheme() for API < 23
+        badgeDrawable.setBackgroundColor(getResources().getColor(R.color.black, getTheme()));
         badgeDrawable.setBadgeTextColor(getResources().getColor(android.R.color.white, getTheme()));
-        // Initial badge is hidden. It's updated in updateCartBadge()
         badgeDrawable.setVisible(false);
-
-
-        // Get a reference to the "products" node in your database.
         DatabaseReference productsRef = FirebaseDatabase.getInstance().getReference("products");
 
-        // Fetch products from Firebase.
+        // for fetching the products from firebase if there is a change in database
         productsRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                productList.clear(); // Clear previous data.
-                filteredList.clear(); // Also clear the filtered list.
+                productList.clear();
+                filteredList.clear();
                 for (DataSnapshot productSnapshot : dataSnapshot.getChildren()) {
                     Product product = productSnapshot.getValue(Product.class);
                     if (product != null) {
                         productList.add(product);
-                        filteredList.add(product); // Initially, filtered list is the same.
+                        filteredList.add(product);
                     }
                 }
-                productAdapter.setProducts(filteredList);// Update adapter.
+                productAdapter.setProducts(filteredList);
             }
 
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
-                Log.e("HomePageActivity", "Error fetching products: " + databaseError.getMessage());
-                Toast.makeText(HomePageActivity.this, "Error fetching products", Toast.LENGTH_SHORT).show();
+                Log.e("HomePageActivity", "error2(firebase not connected maybe) " + databaseError.getMessage());
+                Toast.makeText(HomePageActivity.this, "cant fetch products", Toast.LENGTH_SHORT).show();
             }
         });
 
-        // Set up search bar listener
         searchBar.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) { }
@@ -143,7 +122,6 @@ public class HomePageActivity extends AppCompatActivity implements ProductAdapte
             public void onTextChanged(CharSequence s, int start, int before, int count) {
                 filterProducts(s.toString());
             }
-
             @Override
             public void afterTextChanged(Editable s) { }
         });
@@ -156,11 +134,10 @@ public class HomePageActivity extends AppCompatActivity implements ProductAdapte
         chocolateButton.setOnClickListener(v -> filterByCategory("chocolate"));
 
     }
-
     private void filterByCategory(String category) {
         filteredList.clear();
         if (category.equals("all")) {
-            filteredList.addAll(productList); // Show all products
+            filteredList.addAll(productList); //show all products
         } else {
             for (Product product : productList) {
                 if (product.getCategory() != null && product.getCategory().equalsIgnoreCase(category)) {
@@ -168,7 +145,7 @@ public class HomePageActivity extends AppCompatActivity implements ProductAdapte
                 }
             }
         }
-        productAdapter.setProducts(filteredList); // Update adapter with the correct list
+        productAdapter.setProducts(filteredList);
     }
     private void showAllProducts() {
         filteredList.clear();
@@ -179,17 +156,16 @@ public class HomePageActivity extends AppCompatActivity implements ProductAdapte
     private void filterProducts(String searchText) {
         filteredList.clear();
         if (searchText.isEmpty()) {
-            filteredList.addAll(productList); // If search is empty, show all.
+            filteredList.addAll(productList); // if search is empty it will show all the productss
         } else {
             String query = searchText.toLowerCase(Locale.getDefault());
             for (Product product : productList) {
-                //Check for null before toLowerCase to prevent crashes.
                 if (product.getName() != null && product.getName().toLowerCase(Locale.getDefault()).contains(query)) {
                     filteredList.add(product);
                 }
             }
         }
-        productAdapter.setProducts(filteredList); // Important: Update the RecyclerView
+        productAdapter.setProducts(filteredList); //changes the recyclerview on what i search
     }
 
 
@@ -204,34 +180,27 @@ public class HomePageActivity extends AppCompatActivity implements ProductAdapte
     //method to update cart badge
     @OptIn(markerClass = ExperimentalBadgeUtils.class)
     private void updateCartBadge() {
-        // Set the number and visibility *before* attaching.
         badgeDrawable.setNumber(cartItems.size());
         badgeDrawable.setVisible(cartItems.size() > 0);
 
-        // --- CRITICAL FIX: Use post() and getApplicationContext() ---
         cartView.post(() -> {
             FrameLayout cartViewContainer = findViewById(R.id.cartViewContainer);
-            if (cartViewContainer != null) { // Null check
+            if (cartViewContainer != null) {
                 try {
-                    // Attach the badge *after* layout is complete.
                     BadgeUtils.attachBadgeDrawable(badgeDrawable, cartView, cartViewContainer);
                 } catch (Exception e) {
                     Log.e("HomePageActivity", "Error attaching badge: " + e.getMessage());
                 }
             } else {
-                Log.e("HomePageActivity", "cartViewContainer is NULL");
+                Log.e("HomePageActivity", "cartViewContainer is emptyyyyy");
             }
         });
     }
-
-
-
-    // Implement the click listener interface and receive a *Product* object.
     @Override
     public void onAddToCartClick(Product product) {
         Log.d("HomePageActivity", "onAddToCartClick: Product Name = " + (product != null ? product.getName() : "null"));
 
-        if (product != null) { // Check for null product
+        if (product != null) {
             boolean found = false;
             for (Product p : cartItems) {
                 if (p.getName().equals(product.getName())) {
@@ -241,7 +210,6 @@ public class HomePageActivity extends AppCompatActivity implements ProductAdapte
                 }
             }
             if (!found) {
-                // Add a *copy* of the product with quantity 1.  DO NOT modify the original.
                 cartItems.add(new Product(product.getName(), product.getPrice(), product.getImageUrl(), product.getSize(), 1, product.getCategory()));
             }
             updateCartBadge();

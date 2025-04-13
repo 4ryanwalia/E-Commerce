@@ -31,13 +31,8 @@ color teal_700
 color textColorPrimary
 color textColorSecondary
 color white
-drawable background_gradient
-drawable button_background
-drawable chocolate
 drawable dry_fruits
-drawable edittext_bg
 drawable energy_bar
-drawable greenlays
 drawable ic_cart
 drawable ic_edit
 drawable ic_gift
@@ -53,12 +48,7 @@ drawable logo
 drawable maxlays
 drawable profile_background
 drawable profile_placeholder
-drawable protein
-drawable protein_box
 drawable protein_shake
-drawable round_shape
-drawable rounded_button
-drawable search_bar_background
 id addMoneyButton
 id addMoneyInput
 id addMoneyInputLayout
@@ -113,6 +103,11 @@ id footer_categories
 id footer_order_again
 id footer_rupee
 id imageViewLogo
+id inputConfirmPassword
+id inputEmail
+id inputMobile
+id inputName
+id inputPassword
 id logout
 id minusButton
 id mobileEditText
@@ -139,7 +134,6 @@ id productPriceSmall
 id productPriceTextView
 id productQuantitySmall
 id productRecyclerView
-id productSize
 id profileCard
 id profileIcon
 id profileImageView
@@ -155,6 +149,8 @@ id stateEditText
 id stateInputLayout
 id supportCard
 id supportNumberTextView
+id textInputPassword
+id textInputUsername
 id textViewRegister
 id textViewTitle
 id toolbar

@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from D:\zepto\app\src\main\AndroidManifest.xml:1:1-44:16
-INJECTED from D:\zepto\app\src\main\AndroidManifest.xml:1:1-44:16
-INJECTED from D:\zepto\app\src\main\AndroidManifest.xml:1:1-44:16
-INJECTED from D:\zepto\app\src\main\AndroidManifest.xml:1:1-44:16
+ADDED from D:\zepto\app\src\main\AndroidManifest.xml:1:1-37:16
+INJECTED from D:\zepto\app\src\main\AndroidManifest.xml:1:1-37:16
+INJECTED from D:\zepto\app\src\main\AndroidManifest.xml:1:1-37:16
+INJECTED from D:\zepto\app\src\main\AndroidManifest.xml:1:1-37:16
 MERGED from [com.firebaseui:firebase-ui-auth:8.0.2] C:\Users\aryan\.gradle\caches\8.10.2\transforms\164e7111ae4cc5692fc162f2d86225e2\transformed\firebase-ui-auth-8.0.2\AndroidManifest.xml:2:1-119:12
 MERGED from [com.google.firebase:firebase-analytics:22.2.0] C:\Users\aryan\.gradle\caches\8.10.2\transforms\1951a81968827130423efaefed2c5fc6\transformed\firebase-analytics-22.2.0\AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.firebase:firebase-auth:23.2.0] C:\Users\aryan\.gradle\caches\8.10.2\transforms\dbe3ecef9f20217346165cbe35a8a5e1\transformed\firebase-auth-23.2.0\AndroidManifest.xml:17:1-75:12
@@ -149,15 +149,15 @@ MERGED from [com.facebook.fresco:fbcore:2.6.0] C:\Users\aryan\.gradle\caches\8.1
 	xmlns:android
 		ADDED from D:\zepto\app\src\main\AndroidManifest.xml:1:11-69
 uses-feature#android.hardware.telephony
-ADDED from D:\zepto\app\src\main\AndroidManifest.xml:5:5-7:36
+ADDED from D:\zepto\app\src\main\AndroidManifest.xml:4:5-6:36
 MERGED from [org.osmdroid:osmdroid-android:6.1.13] C:\Users\aryan\.gradle\caches\8.10.2\transforms\f906a02383000f6e5740a882900af4d1\transformed\osmdroid-android-6.1.13\AndroidManifest.xml:20:5-22:36
 MERGED from [org.osmdroid:osmdroid-android:6.1.13] C:\Users\aryan\.gradle\caches\8.10.2\transforms\f906a02383000f6e5740a882900af4d1\transformed\osmdroid-android-6.1.13\AndroidManifest.xml:20:5-22:36
 	android:required
-		ADDED from D:\zepto\app\src\main\AndroidManifest.xml:7:9-33
+		ADDED from D:\zepto\app\src\main\AndroidManifest.xml:6:9-33
 	android:name
-		ADDED from D:\zepto\app\src\main\AndroidManifest.xml:6:9-50
+		ADDED from D:\zepto\app\src\main\AndroidManifest.xml:5:9-50
 uses-permission#android.permission.INTERNET
-ADDED from D:\zepto\app\src\main\AndroidManifest.xml:9:5-67
+ADDED from D:\zepto\app\src\main\AndroidManifest.xml:7:5-67
 MERGED from [com.firebaseui:firebase-ui-auth:8.0.2] C:\Users\aryan\.gradle\caches\8.10.2\transforms\164e7111ae4cc5692fc162f2d86225e2\transformed\firebase-ui-auth-8.0.2\AndroidManifest.xml:11:5-67
 MERGED from [com.firebaseui:firebase-ui-auth:8.0.2] C:\Users\aryan\.gradle\caches\8.10.2\transforms\164e7111ae4cc5692fc162f2d86225e2\transformed\firebase-ui-auth-8.0.2\AndroidManifest.xml:11:5-67
 MERGED from [com.google.firebase:firebase-auth:23.2.0] C:\Users\aryan\.gradle\caches\8.10.2\transforms\dbe3ecef9f20217346165cbe35a8a5e1\transformed\firebase-auth-23.2.0\AndroidManifest.xml:25:5-67
@@ -187,14 +187,14 @@ MERGED from [com.google.firebase:firebase-installations:18.0.0] C:\Users\aryan\.
 MERGED from [com.google.android.gms:play-services-measurement-sdk-api:22.2.0] C:\Users\aryan\.gradle\caches\8.10.2\transforms\5ecba0ddb06900bffc64e636dcbeaf09\transformed\play-services-measurement-sdk-api-22.2.0\AndroidManifest.xml:23:5-67
 MERGED from [com.google.android.gms:play-services-measurement-sdk-api:22.2.0] C:\Users\aryan\.gradle\caches\8.10.2\transforms\5ecba0ddb06900bffc64e636dcbeaf09\transformed\play-services-measurement-sdk-api-22.2.0\AndroidManifest.xml:23:5-67
 	android:name
-		ADDED from D:\zepto\app\src\main\AndroidManifest.xml:9:22-64
+		ADDED from D:\zepto\app\src\main\AndroidManifest.xml:7:22-64
 uses-permission#android.permission.READ_EXTERNAL_STORAGE
-ADDED from D:\zepto\app\src\main\AndroidManifest.xml:10:5-80
+ADDED from D:\zepto\app\src\main\AndroidManifest.xml:8:5-80
 	android:name
-		ADDED from D:\zepto\app\src\main\AndroidManifest.xml:10:22-77
+		ADDED from D:\zepto\app\src\main\AndroidManifest.xml:8:22-77
 application
-ADDED from D:\zepto\app\src\main\AndroidManifest.xml:12:5-42:15
-INJECTED from D:\zepto\app\src\main\AndroidManifest.xml:12:5-42:15
+ADDED from D:\zepto\app\src\main\AndroidManifest.xml:9:5-36:15
+INJECTED from D:\zepto\app\src\main\AndroidManifest.xml:9:5-36:15
 MERGED from [com.firebaseui:firebase-ui-auth:8.0.2] C:\Users\aryan\.gradle\caches\8.10.2\transforms\164e7111ae4cc5692fc162f2d86225e2\transformed\firebase-ui-auth-8.0.2\AndroidManifest.xml:25:5-117:19
 MERGED from [com.firebaseui:firebase-ui-auth:8.0.2] C:\Users\aryan\.gradle\caches\8.10.2\transforms\164e7111ae4cc5692fc162f2d86225e2\transformed\firebase-ui-auth-8.0.2\AndroidManifest.xml:25:5-117:19
 MERGED from [com.google.firebase:firebase-analytics:22.2.0] C:\Users\aryan\.gradle\caches\8.10.2\transforms\1951a81968827130423efaefed2c5fc6\transformed\firebase-analytics-22.2.0\AndroidManifest.xml:7:5-20
@@ -300,97 +300,97 @@ MERGED from [com.facebook.soloader:soloader:0.10.1] C:\Users\aryan\.gradle\cache
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.13.0] C:\Users\aryan\.gradle\caches\8.10.2\transforms\0cdafabae6ad3c3a08e7a298b68abec2\transformed\core-1.13.0\AndroidManifest.xml:28:18-86
 	android:supportsRtl
-		ADDED from D:\zepto\app\src\main\AndroidManifest.xml:19:5-31
+		ADDED from D:\zepto\app\src\main\AndroidManifest.xml:16:5-31
 	android:label
-		ADDED from D:\zepto\app\src\main\AndroidManifest.xml:17:5-37
+		ADDED from D:\zepto\app\src\main\AndroidManifest.xml:14:5-37
 	android:fullBackupContent
 		ADDED from [com.cloudinary:cloudinary-android-core:2.3.0] C:\Users\aryan\.gradle\caches\8.10.2\transforms\aa41ecc9474b8859defff456ce8c58e5\transformed\cloudinary-android-core-2.3.0\AndroidManifest.xml:11:18-64
 	android:roundIcon
-		ADDED from D:\zepto\app\src\main\AndroidManifest.xml:18:5-39
+		ADDED from D:\zepto\app\src\main\AndroidManifest.xml:15:5-39
 	tools:targetApi
-		ADDED from D:\zepto\app\src\main\AndroidManifest.xml:21:5-25
+		ADDED from D:\zepto\app\src\main\AndroidManifest.xml:18:5-25
 	android:icon
-		ADDED from D:\zepto\app\src\main\AndroidManifest.xml:16:5-34
+		ADDED from D:\zepto\app\src\main\AndroidManifest.xml:13:5-34
 	android:allowBackup
-		ADDED from D:\zepto\app\src\main\AndroidManifest.xml:14:5-31
+		ADDED from D:\zepto\app\src\main\AndroidManifest.xml:11:5-31
 	android:theme
-		ADDED from D:\zepto\app\src\main\AndroidManifest.xml:20:5-39
+		ADDED from D:\zepto\app\src\main\AndroidManifest.xml:17:5-39
 	android:dataExtractionRules
-		ADDED from D:\zepto\app\src\main\AndroidManifest.xml:15:5-61
+		ADDED from D:\zepto\app\src\main\AndroidManifest.xml:12:5-61
 	android:name
-		ADDED from D:\zepto\app\src\main\AndroidManifest.xml:13:9-33
+		ADDED from D:\zepto\app\src\main\AndroidManifest.xml:10:9-33
 activity#com.nmims.zepto.MainActivity
-ADDED from D:\zepto\app\src\main\AndroidManifest.xml:23:5-28:16
+ADDED from D:\zepto\app\src\main\AndroidManifest.xml:19:5-24:16
 	android:exported
-		ADDED from D:\zepto\app\src\main\AndroidManifest.xml:23:44-67
+		ADDED from D:\zepto\app\src\main\AndroidManifest.xml:19:44-67
 	android:name
-		ADDED from D:\zepto\app\src\main\AndroidManifest.xml:23:15-43
+		ADDED from D:\zepto\app\src\main\AndroidManifest.xml:19:15-43
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from D:\zepto\app\src\main\AndroidManifest.xml:24:9-27:25
+ADDED from D:\zepto\app\src\main\AndroidManifest.xml:20:9-23:25
 action#android.intent.action.MAIN
-ADDED from D:\zepto\app\src\main\AndroidManifest.xml:25:13-65
+ADDED from D:\zepto\app\src\main\AndroidManifest.xml:21:13-65
 	android:name
-		ADDED from D:\zepto\app\src\main\AndroidManifest.xml:25:21-62
+		ADDED from D:\zepto\app\src\main\AndroidManifest.xml:21:21-62
 category#android.intent.category.LAUNCHER
-ADDED from D:\zepto\app\src\main\AndroidManifest.xml:26:13-73
+ADDED from D:\zepto\app\src\main\AndroidManifest.xml:22:13-73
 	android:name
-		ADDED from D:\zepto\app\src\main\AndroidManifest.xml:26:23-70
+		ADDED from D:\zepto\app\src\main\AndroidManifest.xml:22:23-70
 activity#com.nmims.zepto.EditProfileActivity
-ADDED from D:\zepto\app\src\main\AndroidManifest.xml:30:5-78
+ADDED from D:\zepto\app\src\main\AndroidManifest.xml:25:5-78
 	android:exported
-		ADDED from D:\zepto\app\src\main\AndroidManifest.xml:30:51-75
+		ADDED from D:\zepto\app\src\main\AndroidManifest.xml:25:51-75
 	android:name
-		ADDED from D:\zepto\app\src\main\AndroidManifest.xml:30:15-50
+		ADDED from D:\zepto\app\src\main\AndroidManifest.xml:25:15-50
 activity#com.nmims.zepto.RegisterActivity
-ADDED from D:\zepto\app\src\main\AndroidManifest.xml:31:5-75
+ADDED from D:\zepto\app\src\main\AndroidManifest.xml:26:5-75
 	android:exported
-		ADDED from D:\zepto\app\src\main\AndroidManifest.xml:31:48-72
+		ADDED from D:\zepto\app\src\main\AndroidManifest.xml:26:48-72
 	android:name
-		ADDED from D:\zepto\app\src\main\AndroidManifest.xml:31:15-47
+		ADDED from D:\zepto\app\src\main\AndroidManifest.xml:26:15-47
 activity#com.nmims.zepto.HomePageActivity
-ADDED from D:\zepto\app\src\main\AndroidManifest.xml:32:5-75
+ADDED from D:\zepto\app\src\main\AndroidManifest.xml:27:5-75
 	android:exported
-		ADDED from D:\zepto\app\src\main\AndroidManifest.xml:32:48-72
+		ADDED from D:\zepto\app\src\main\AndroidManifest.xml:27:48-72
 	android:name
-		ADDED from D:\zepto\app\src\main\AndroidManifest.xml:32:15-47
+		ADDED from D:\zepto\app\src\main\AndroidManifest.xml:27:15-47
 activity#com.nmims.zepto.ProfileActivity
-ADDED from D:\zepto\app\src\main\AndroidManifest.xml:33:5-74
+ADDED from D:\zepto\app\src\main\AndroidManifest.xml:28:5-74
 	android:exported
-		ADDED from D:\zepto\app\src\main\AndroidManifest.xml:33:47-71
+		ADDED from D:\zepto\app\src\main\AndroidManifest.xml:28:47-71
 	android:name
-		ADDED from D:\zepto\app\src\main\AndroidManifest.xml:33:15-46
+		ADDED from D:\zepto\app\src\main\AndroidManifest.xml:28:15-46
 activity#com.nmims.zepto.CartActivity
+ADDED from D:\zepto\app\src\main\AndroidManifest.xml:29:5-71
+	android:exported
+		ADDED from D:\zepto\app\src\main\AndroidManifest.xml:29:44-68
+	android:name
+		ADDED from D:\zepto\app\src\main\AndroidManifest.xml:29:15-43
+activity#com.nmims.zepto.GiftCardActivity
+ADDED from D:\zepto\app\src\main\AndroidManifest.xml:30:5-75
+	android:exported
+		ADDED from D:\zepto\app\src\main\AndroidManifest.xml:30:48-72
+	android:name
+		ADDED from D:\zepto\app\src\main\AndroidManifest.xml:30:15-47
+activity#com.nmims.zepto.SupportActivity
+ADDED from D:\zepto\app\src\main\AndroidManifest.xml:31:5-33:35
+	android:label
+		ADDED from D:\zepto\app\src\main\AndroidManifest.xml:32:9-41
+	android:exported
+		ADDED from D:\zepto\app\src\main\AndroidManifest.xml:33:9-32
+	android:name
+		ADDED from D:\zepto\app\src\main\AndroidManifest.xml:31:15-46
+activity#com.nmims.zepto.OrderActivity
 ADDED from D:\zepto\app\src\main\AndroidManifest.xml:34:5-71
 	android:exported
-		ADDED from D:\zepto\app\src\main\AndroidManifest.xml:34:44-68
+		ADDED from D:\zepto\app\src\main\AndroidManifest.xml:34:45-69
 	android:name
-		ADDED from D:\zepto\app\src\main\AndroidManifest.xml:34:15-43
-activity#com.nmims.zepto.GiftCardActivity
-ADDED from D:\zepto\app\src\main\AndroidManifest.xml:35:5-75
-	android:exported
-		ADDED from D:\zepto\app\src\main\AndroidManifest.xml:35:48-72
-	android:name
-		ADDED from D:\zepto\app\src\main\AndroidManifest.xml:35:15-47
-activity#com.nmims.zepto.SupportActivity
-ADDED from D:\zepto\app\src\main\AndroidManifest.xml:36:5-38:35
-	android:label
-		ADDED from D:\zepto\app\src\main\AndroidManifest.xml:37:9-41
-	android:exported
-		ADDED from D:\zepto\app\src\main\AndroidManifest.xml:38:9-32
-	android:name
-		ADDED from D:\zepto\app\src\main\AndroidManifest.xml:36:15-46
-activity#com.nmims.zepto.OrderActivity
-ADDED from D:\zepto\app\src\main\AndroidManifest.xml:39:5-71
-	android:exported
-		ADDED from D:\zepto\app\src\main\AndroidManifest.xml:39:45-69
-	android:name
-		ADDED from D:\zepto\app\src\main\AndroidManifest.xml:39:15-44
+		ADDED from D:\zepto\app\src\main\AndroidManifest.xml:34:15-44
 activity#com.nmims.zepto.RecentOrdersActivity
-ADDED from D:\zepto\app\src\main\AndroidManifest.xml:40:5-78
+ADDED from D:\zepto\app\src\main\AndroidManifest.xml:35:5-78
 	android:exported
-		ADDED from D:\zepto\app\src\main\AndroidManifest.xml:40:52-76
+		ADDED from D:\zepto\app\src\main\AndroidManifest.xml:35:52-76
 	android:name
-		ADDED from D:\zepto\app\src\main\AndroidManifest.xml:40:15-51
+		ADDED from D:\zepto\app\src\main\AndroidManifest.xml:35:15-51
 uses-sdk
 INJECTED from D:\zepto\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from D:\zepto\app\src\main\AndroidManifest.xml

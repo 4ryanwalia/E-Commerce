@@ -36,14 +36,14 @@ public class MainActivity extends AppCompatActivity {
         database = FirebaseDatabase.getInstance();
         usersRef = database.getReference("users");
 
-        // Check if the user is already logged in
+        
         SharedPreferences sharedPreferences = getSharedPreferences("user_data", MODE_PRIVATE);
         boolean isLoggedIn = sharedPreferences.getBoolean("isLoggedIn", false);
 
         if (isLoggedIn) {
-            // User is already logged in, navigate to HomePageActivity
+            
             startActivity(new Intent(MainActivity.this, HomePageActivity.class));
-            finish(); // Close MainActivity
+            finish(); 
         }
 
         buttonLogin.setOnClickListener(v -> {
@@ -51,57 +51,49 @@ public class MainActivity extends AppCompatActivity {
             String password = editTextPassword.getText().toString();
 
             if (TextUtils.isEmpty(email) || TextUtils.isEmpty(password)) {
-                Toast.makeText(MainActivity.this, "Please enter email and password", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, "enter your email and password", Toast.LENGTH_SHORT).show();
                 return;
             }
-
             mAuth.signInWithEmailAndPassword(email, password)
                     .addOnCompleteListener(task -> {
                         if (task.isSuccessful()) {
                             try {
-                                // Check if email is verified
                                 FirebaseUser user = mAuth.getCurrentUser();
                                 if (user != null && user.isEmailVerified()) {
-                                    // Store login status in SharedPreferences
                                     SharedPreferences.Editor editor = sharedPreferences.edit();
                                     editor.putBoolean("isLoggedIn", true);
                                     editor.apply();
-
-                                    // Check if walletBalance exists for the user in Realtime Database
                                     String userId = user.getUid();
                                     usersRef.child(userId).child("walletBalance").get().addOnCompleteListener(walletTask -> {
                                         if (walletTask.isSuccessful()) {
                                             if (walletTask.getResult().getValue() == null) {
-                                                // If walletBalance does not exist, set it to 0.0
+                                                
                                                 usersRef.child(userId).child("walletBalance").setValue(0.0)
                                                         .addOnSuccessListener(aVoid -> {
-                                                            Toast.makeText(MainActivity.this, "Wallet balance initialized to 0.0", Toast.LENGTH_SHORT).show();
+                                                            Toast.makeText(MainActivity.this, "walleet balance initialized to 0.0", Toast.LENGTH_SHORT).show();
                                                         })
                                                         .addOnFailureListener(e -> {
-                                                            Toast.makeText(MainActivity.this, "Error initializing wallet balance: " + e.getMessage(), Toast.LENGTH_SHORT).show();
+                                                            Toast.makeText(MainActivity.this, "error initializing wallet balance: " + e.getMessage(), Toast.LENGTH_SHORT).show();
                                                         });
                                             }
-                                        } else {
-                                            Toast.makeText(MainActivity.this, "Error fetching wallet balance: " + walletTask.getException().getMessage(), Toast.LENGTH_SHORT).show();
                                         }
                                     });
 
-                                    Toast.makeText(MainActivity.this, "Login successful!", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(MainActivity.this, "lets goooo!", Toast.LENGTH_SHORT).show();
                                     startActivity(new Intent(MainActivity.this, HomePageActivity.class));
-                                    finish(); // Close MainActivity after successful login
+                                    finish(); 
                                 } else if (user != null) {
-                                    Toast.makeText(MainActivity.this, "Please verify your email address.", Toast.LENGTH_LONG).show();
+                                    Toast.makeText(MainActivity.this, "verify your email.", Toast.LENGTH_LONG).show();
                                 }
                             } catch (Exception e) {
-                                Log.e("MainActivity", "Error after successful login", e);
-                                Toast.makeText(MainActivity.this, "An error occurred: " + e.getMessage(), Toast.LENGTH_SHORT).show();
+                                Log.e("MainActivity", " errrorrrrrrrrrr", e);
+                                Toast.makeText(MainActivity.this, " errorR occurred: " + e.getMessage(), Toast.LENGTH_SHORT).show();
                             }
                         } else {
-                            Toast.makeText(MainActivity.this, "Login failed: " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                            Toast.makeText(MainActivity.this, "login failedd :(: " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                         }
                     });
         });
-
         textViewRegister.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, RegisterActivity.class)));
     }
 }

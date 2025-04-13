@@ -1,22 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/dark_background"
     tools:context=".ProfileActivity">
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/profileCard"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        app:cardCornerRadius="8dp"
-        app:cardElevation="4dp"
-        app:cardBackgroundColor="@color/colorCardBackground"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="20dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="6dp"
+        app:cardBackgroundColor="@color/search_background"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintEnd_toEndOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -25,131 +27,129 @@
 
             <com.google.android.material.imageview.ShapeableImageView
                 android:id="@+id/profileImageView"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
                 android:scaleType="centerCrop"
+                android:src="@drawable/ic_profile"
+                app:shapeAppearance="@style/ShapeAppearance.MaterialComponents.SmallComponent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                tools:src="@drawable/ic_profile" />
+                app:layout_constraintBottom_toBottomOf="parent" />
+
 
             <TextView
                 android:id="@+id/userNameTextView"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:textAppearance="?attr/textAppearanceHeadline6"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/light_text_color"
+                app:layout_constraintTop_toTopOf="@id/profileImageView"
+                app:layout_constraintStart_toEndOf="@id/profileImageView"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/profileImageView"
-                app:layout_constraintTop_toTopOf="@+id/profileImageView"
-                tools:text="User Name" />
+                tools:text="Aryan Sharma" />
 
             <TextView
                 android:id="@+id/userEmailTextView"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:textAppearance="?attr/textAppearanceBody2"
-                android:textColor="@color/textColorSecondary"
+                android:textSize="14sp"
+                android:textColor="@color/secondary_text_color"
+                app:layout_constraintTop_toBottomOf="@id/userNameTextView"
+                app:layout_constraintStart_toEndOf="@id/profileImageView"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/profileImageView"
-                app:layout_constraintTop_toBottomOf="@+id/userNameTextView"
-                tools:text="user@example.com" />
+                tools:text="aryan@example.com" />
 
             <TextView
                 android:id="@+id/userPhoneTextView"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:textAppearance="?attr/textAppearanceBody2"
-                android:textColor="@color/textColorSecondary"
+                android:textSize="14sp"
+                android:textColor="@color/secondary_text_color"
+                app:layout_constraintTop_toBottomOf="@id/userEmailTextView"
+                app:layout_constraintStart_toEndOf="@id/profileImageView"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/profileImageView"
-                app:layout_constraintTop_toBottomOf="@+id/userEmailTextView"
-                tools:text="123-456-7890" />
-
+                tools:text="+91 98765 43210" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </com.google.android.material.card.MaterialCardView>
 
-
+    <!-- Buttons -->
     <com.google.android.material.button.MaterialButton
-        style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
         android:id="@+id/editProfile"
+        style="@style/Widget.Material3.Button.TonalButton"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="12dp"
         android:text="Edit Profile"
-        android:textColor="@color/white"
         app:icon="@drawable/ic_edit"
-        app:iconTint="@color/textColorPrimary"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:iconTint="@color/light_text_color"
+        android:textColor="@color/light_text_color"
+        app:backgroundTint="@color/dark_toolbar"
+        app:layout_constraintTop_toBottomOf="@id/profileCard"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/profileCard"
-        android:gravity="start|center_vertical"
-        android:textAlignment="viewStart"
-        />
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <com.google.android.material.button.MaterialButton
-        style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
         android:id="@+id/recentOrders"
+        style="@style/Widget.Material3.Button.TonalButton"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="Recent Orders"
-        android:textColor="@color/white"
         app:icon="@drawable/ic_orders"
-        app:iconTint="@color/textColorPrimary"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:iconTint="@color/light_text_color"
+        android:textColor="@color/light_text_color"
+        app:backgroundTint="@color/dark_toolbar"
+        app:layout_constraintTop_toBottomOf="@id/editProfile"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editProfile"
-        android:gravity="start|center_vertical"
-        android:textAlignment="viewStart"
-        />
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp" />
 
     <com.google.android.material.button.MaterialButton
-        style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
         android:id="@+id/customerSupport"
+        style="@style/Widget.Material3.Button.TonalButton"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="Customer Support"
-        android:textColor="@color/white"
         app:icon="@drawable/ic_support"
-        app:iconTint="@color/textColorPrimary"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:iconTint="@color/light_text_color"
+        android:textColor="@color/light_text_color"
+        app:backgroundTint="@color/dark_toolbar"
+        app:layout_constraintTop_toBottomOf="@id/recentOrders"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/recentOrders"
-        android:gravity="start|center_vertical"
-        android:textAlignment="viewStart"
-        />
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp" />
 
     <com.google.android.material.button.MaterialButton
-        style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
         android:id="@+id/myGiftCard"
+        style="@style/Widget.Material3.Button.TonalButton"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="My Gift Card"
-        android:textColor="@color/white"
         app:icon="@drawable/ic_gift"
-        app:iconTint="@color/textColorPrimary"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:iconTint="@color/light_text_color"
+        android:textColor="@color/light_text_color"
+        app:backgroundTint="@color/dark_toolbar"
+        app:layout_constraintTop_toBottomOf="@id/customerSupport"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/customerSupport"
-        android:gravity="start|center_vertical"
-        android:textAlignment="viewStart"
-        />
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp" />
 
     <com.google.android.material.button.MaterialButton
-        style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
         android:id="@+id/logout"
+        style="@style/Widget.Material3.Button.TonalButton"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="Logout"
-        android:textColor="@color/white"
         app:icon="@drawable/ic_logout"
-        app:iconTint="@color/textColorPrimary"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:iconTint="@color/light_text_color"
+        android:textColor="@color/light_text_color"
+        app:backgroundTint="@color/colorAccent"
+        app:layout_constraintTop_toBottomOf="@id/myGiftCard"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/myGiftCard"
-        android:gravity="start|center_vertical"
-        android:textAlignment="viewStart"
-        />
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="12dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

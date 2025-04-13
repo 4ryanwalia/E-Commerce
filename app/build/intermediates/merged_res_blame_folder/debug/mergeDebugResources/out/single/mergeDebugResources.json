@@ -168,10 +168,6 @@
         "source": "C:\\Users\\aryan\\.gradle\\daemon\\8.10.2\\com.nmims.zepto.app-main-63:\\color\\blue_background.xml"
     },
     {
-        "merged": "com.nmims.zepto.app-debug-61:/layout_activity_order.xml.flat",
-        "source": "com.nmims.zepto.app-main-63:/layout/activity_order.xml"
-    },
-    {
         "merged": "C:\\Users\\aryan\\.gradle\\daemon\\8.10.2\\com.nmims.zepto.app-debug-61:\\layout_activity_edit_profile.xml.flat",
         "source": "C:\\Users\\aryan\\.gradle\\daemon\\8.10.2\\com.nmims.zepto.app-main-63:\\layout\\activity_edit_profile.xml"
     },

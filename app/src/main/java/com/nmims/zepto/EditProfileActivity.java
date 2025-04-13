@@ -53,8 +53,6 @@ public class EditProfileActivity extends AppCompatActivity {
                             Glide.with(this).load(imageUri).into(profileImageView);
                         }
                     });
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -74,7 +72,6 @@ public class EditProfileActivity extends AppCompatActivity {
             return;
         }
         String userId = currentUser.getUid();
-        // Initialize userRef ONLY ONCE here in onCreate
         userRef = FirebaseDatabase.getInstance().getReference().child("users").child(userId);
 
         loadExistingUserInfo();
@@ -107,7 +104,6 @@ public class EditProfileActivity extends AppCompatActivity {
     }
 
     private void loadExistingUserInfo() {
-        // Use the existing userRef
         userRef.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -131,8 +127,8 @@ public class EditProfileActivity extends AppCompatActivity {
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
-                Log.e(TAG, "Error loading user info", error.toException());
-                Toast.makeText(EditProfileActivity.this, "Error loading user info", Toast.LENGTH_SHORT).show();
+                Log.e(TAG, "errorblsh", error.toException());
+                Toast.makeText(EditProfileActivity.this, "errorblsh", Toast.LENGTH_SHORT).show();
             }
         });
     }
@@ -142,11 +138,11 @@ public class EditProfileActivity extends AppCompatActivity {
         String phone = editTextPhone.getText().toString().trim();
 
         if (name.isEmpty() || phone.isEmpty()) {
-            Toast.makeText(this, "Please fill in all fields", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "please fill fields", Toast.LENGTH_SHORT).show();
             return;
         }
         if (phone.length() != 10) {
-            Toast.makeText(this, "Please enter a valid 10-digit mobile number", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "not a valid number", Toast.LENGTH_SHORT).show();
             return;
         }
 

@@ -7,8 +7,6 @@ public class ZeptoApp extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-
-        // ✅ Enable Firebase Persistence (Only Once)
         FirebaseDatabase.getInstance().setPersistenceEnabled(true);
     }
 }
